@@ -1,0 +1,35 @@
+
+<!--     const scrollHeight = inputField.scrollHeight;-->
+<!--        const lineHeight = parseInt(window.getComputedStyle(inputField).lineHeight, 10);-->
+
+
+<!--       // Calculate the number of lines based on scrollHeight and lineHeight-->
+<!--        const lines = Math.ceil(scrollHeight / lineHeight);-->
+
+<!--        // Adjust input height if lines exceed a certain threshold (e.g., 2 lines)-->
+<!--        if (lines >= 2) {-->
+<!--            inputField.style.height = `${lineHeight * 2}px`; // Double the height of one line-->
+<!--        } else {-->
+<!--            inputField.style.height = ''; // Reset to default height if less than 2 lines-->
+<!--        }-->
+
+<!--            console.log(`Input width: ${width}px,     scrollHeight: ${scrollHeight}`,length);-->
+<!--    }-->
+
+<!--    // Event listener for input changes-->
+<!--    inputField.addEventListener('input', adjustInputSize);-->
+<!--    adjustInputSize();-->
+
+ const textarea = document.getElementById('inputField');
+     function adjustInputSize() {
+<!--      const length = textarea.value.length;-->
+      const width = textarea.offsetWidth; // Width of the input element
+       const height = textarea.offsetHeight;
+       const normalRows = textarea.rows;
+       const normalCols = textarea.cols;
+
+       console.log(`Input width: ${width}px, height: ${height}`,normalRows,normalCols);
+
+
+       }
+       textarea.addEventListener('input', adjustInputSize);
